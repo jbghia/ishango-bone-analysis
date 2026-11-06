@@ -45,3 +45,15 @@ Both randomisation routines sample shuffled versions of each reference configura
 The original randomisation scripts display zero hits as `< 1/N`; that is a display convention, not a formal confidence bound, and zero hits do not prove zero probability. Their randomisation does not replay reconstruction edits or account automatically for exploratory property selection. Their opening comment about equal-sum pairability implying positional outer-middle equality should not be read literally: P4 is position-independent. These notes document limitations without altering the supplied scripts.
 
 No manuscript source, figures, or new licence grant is included. Cite the paper DOI above and the specific repository commit when referencing the code.
+
+## Results reported in the revised manuscript
+
+The manuscript reports the 1,000,000-arrangement randomisation runs for the three reference configurations. The additional 50,000-arrangement runs remain in the original scripts for reproducibility but are not presented as an independent validation method.
+
+For the fully adjusted configuration, the manuscript reports zero exceedances in 1,000,000 simulations, rather than treating the scripts' `< 1/N` display as a probability bound. The corresponding one-sided exact 95% binomial upper confidence limit is approximately 2.996 × 10^-6, conditional on the fixed shuffle model and scoring rule. This limit quantifies simulation uncertainty, not uncertainty arising from exploratory selection or historical interpretation.
+
+The analysis-code version used for these results is commit `d9ae017eee18449f8dfda88cbb86f92b7fac23d6`. These documentation additions do not change the Python scripts or the reported numerical counts.
+
+## Scope of the D alternatives
+
+The 64-configuration analysis includes the documented D order (11,21,19,9) and the first-two-entry exchange (21,11,19,9). It does not include the alternative last-two-entry exchange (11,21,9,19), which also gives equal outer and inner sums. The reported uniqueness therefore applies only to the specified reconstruction space, not to all possible single-transposition alternatives.
